@@ -1,31 +1,22 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import {APP_NAME} from '../config'
-import Link from 'next/link'
-import Router  from 'next/router'
-import { signout } from '../actions/auth'
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-      <title>{APP_NAME}</title>
+        <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          
-          Welcome to 
-          <Link href="/login">
-          <a>{APP_NAME}</a>
-          </Link>
+          Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
         <p className={styles.description}>
-          <Link href="#">
-          <a onClick={()=>signout(()=>Router.replace('/login'))} >Logout</a>  
-          </Link> 
+          Get started by editing{' '}
+          <code className={styles.code}>pages/index.js</code>
         </p>
 
         <div className={styles.grid}>
